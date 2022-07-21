@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>LUXICA | HOME</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/Comp_FA_2.png" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>LUXICA</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+         <li><a  href="/" >Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/news">News</a></li>
+          <li class="dropdown"><a href="#" ><span>Our Merchandise</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/accessories">Personal Accessories</a></li>
+              <li><a href="/computers">Computers</a></li>
+              <li><a href="/phones">Smart Phones</a></li>
+              <li><a href="/techutils">Tech Utilities</a></li>
+              <li><a href="/maintenance">Maintenance</a></li>
+            </ul>
+          </li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Welcome to <span>LUXICA</span></h2>
+          <p class="animate__animated animate__fadeInUp">We are a medium scale retail facility that
+           focuses on bringing you the latest and finest of tech products out there. From smart phones, high performance laptops, replaceable & upgradable components, to a professional maintenance service with some of the best technicians around, we've truly got it all!
+          </p>
+          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Ease of Purchase</h2>
+          <p class="animate__animated animate__fadeInUp">Get in touch and you can purchase with us whenever you want and wherever you are. With a robust and detail-oriented team working in the background, we are committed to meeting all your needs for the most reasonabe prices. </p>
+          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Purchase Now!</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">One of the best in the business</h2>
+          <p class="animate__animated animate__fadeInUp"> With over five years of experience, we are 
+            publically recognized for our outstanding quality products and services. Our ability to enhance our quality over the years is sure to keep on going as our main asset. We go to battle with quality as our weapon!
+          </p>
+          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Explore LUXICA</a>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+
+    <!----- ACCESSORIES SECTION-------->
+
+
+    <div class="container-fluid text-center">
+      <h3>Latest Items</h3>
+      <hr class="PA-hr" />
+      <!-- #F3F8FA -->
+       <% if(items.length > 0){ %>
+         <% items.forEach(item =>{ %>
+
+            <div class="col-md-12 mt-5 mb-5 p-3 accessories">
+              <div class="PA-left">
+                <img src="/assets/img/Accessories.jfif" alt="Unable to display this image">
+              </div>
+              <div class="PA-right"> 
+                <h3> Accessory: <%= item.name %> </h3>
+                 <p>  Brand: <%= item.brand %> </p>
+                 <p>  Price: <%= item.price %> </p>
+                 <p>  Inventory: <%= item.inventory %> </p>
+                 <p>  Status: <%= item.status %></p>
+                 <p> <a href="/gallery">View Item</a></p>
+                 <p> <a href="/contact">Buy Now</a></p>
+              </div>
+                 
+            </div>
+
+         <% }) %>
+
+       <% } else {%>
+
+           <div class="col-md-12 mt-5 mb-5 p-2 accessories">
+  
+                <p>There are currently no personal accessories in our inventory......</p>
+
+           </div>
+       <% } %>
+
+       <center><a href="/accessories">View All Items</a></center>
+
+    </div>
+
+    <!-------- END OF ACCESSORIES SECTION---------->
+
+  
+
+    <!-- ======= Services Section ======= -->
+    <section class="services">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Multi-taskers</a></h4>
+              <p class="description">We have a plethora of services and products for you to choose
+               from. With tech as our cornerstone, we are sure to be your top choice.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Committed to collective success</a></h4>
+              <p class="description">With about 20% of the tech companies going out of business each year, we are on the rise for the foreseeable future.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">24/7 Support</a></h4>
+              <p class="description">We have a strong team of technicians, who can't wait to work with you to holistically satisfy your needs with a finger snap</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Nation wide excellence</a></h4>
+              <p class="description">Located in the midst of Kigali city, we expose you to some of the latest and trendy accessories in the country.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 video-box">
+            <img src="assets/img/Late_1.jpg" class="img-fluid" alt="">
+            <a href="#" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <h4 class="title"><a href="">Latest Products</a></h4>
+              <p class="description">We have some of the most recently released products you can't find elsewhere at a reasonable price.</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="">Seasonal Promotions</a></h4>
+              <p class="description">With our generous seasonal and festive promotions, you can buy a different range of products right away.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section class="features">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Depth at LUXICA</h2>
+          <p> Here at LUXICA, we have made it our mission to leave a smile on all of our
+          customers' faces. Attentive to interests of both parties, we have people who are experts at what they do and are waiting for a chance to work with you.
+          </p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="assets/img/features-1.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4">
+            <h3>State of the art equipments, staff and premises. Some of our biggest stand points.</h3>
+            <p class="fst-italic">
+              The members at LUXICA aren't just any staff members. We are like a family and thus share the same goal of delivering quality. 
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> Multiple connections around Kigali to support us and acquire new products</li>
+              <li><i class="bi bi-check"></i> Well trained team members, experts to be exact.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="assets/img/features-2.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3>We are a growing business</h3>
+            <p class="fst-italic">
+              Since the founding of LUXICA, we have been expanding our horizons and we believe we still have a long way to go.
+            </p>
+            <p>
+              With a team of visonaries like Stone Tech's, the sky is the limit for us. We spent years preparing our project and even though what we have so far is substantial, it is still minute compared to what we plan to achieve in the near and distant future.  
+              Doing business with us is surely a plus!
+            </p>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="assets/img/features-3.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5">
+            <h3>Mobility, flexibility and equity are one of our core values</h3>
+            <p>We are understanding in all aspects especially financially and we are prepared to reach an understanding 
+               with you to ensure you leave satisfied.</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Well known for our exclusive discounts and bargaining
+              policy</li>
+              <li><i class="bi bi-check"></i> Our customer support and care is unparalleled</li>
+              <li><i class="bi bi-check"></i> Quality over quantity is a hallmark of our business
+               operations
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="assets/img/features-4.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3>We simply tick all the right boxes. We are among the best sellers in Kigali for a plethora of reasons.</h3>
+            <p class="fst-italic">
+              Customers first and foremost, quality over quantity, financial flexibility and equity are important stepping-stones of our business.
+            </p>
+            <p>
+              Great satisfaction comes from the process of creation -- starting with just an idea and building something that lasts.
+              The founders of the business, who are generally also members, are able to create wealth for their families and security for their future, as well as enjoy a more affluent lifestyle. Here at Luxica we measure our success by customer satisfaction.
+             
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Our Newsletter</h4>
+            <p>Subscribe to our newsletter to stay updated with the latest news about LUXICA</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Merchandise</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Personal Accessories</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Computers</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Smart phones</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Tech utilities</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Maintenance</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Makuza Peace Plaza <br>
+              Kigali, KN 48 St.<br>
+              Rwanda <br><br>
+              <strong>Phone:</strong> +250 7882 628 55<br>
+              <strong>Email:</strong> luxica@gmail.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About Luxica</h3>
+            <p>We are a medium scale retail facility that focuses on bringing you tech products like smart phones, high performance laptops, replaceable & upgradable components & maintenance service.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>LUXICA</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://twitter.com/_stevesh_" target="_blank">LLEDOX</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
